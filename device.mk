@@ -59,8 +59,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service \
-    bootctrl.msm8937
+    android.hardware.boot@1.1-service
 
 # A/B - Postinstallation - otapreopt
 PRODUCT_PACKAGES += \
