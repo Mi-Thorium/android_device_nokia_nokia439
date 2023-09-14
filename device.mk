@@ -57,8 +57,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/olive_mixer_paths_sdm439_pm8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/olive_mixer_paths_sdm439_pm8953.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm8937
+#PRODUCT_PACKAGES += \
+#    camera.msm8937
 
 # Filesystem
 PRODUCT_PACKAGES += \
