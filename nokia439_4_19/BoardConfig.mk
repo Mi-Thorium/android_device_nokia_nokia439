@@ -5,7 +5,7 @@
 #
 
 # Inherit from upper BoardConfig.mk
-include device/xiaomi/Mi439/BoardConfig.mk
+include device/nokia/nokia439/BoardConfig.mk
 
 # Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/Mi439_4_19/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/nokia439_4_19/vendor.prop

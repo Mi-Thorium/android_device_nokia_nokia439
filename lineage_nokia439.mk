@@ -15,8 +15,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Kernel
 TARGET_KERNEL_VERSION := 4.9
 
-# Inherit from Mi439 device
-$(call inherit-product, device/xiaomi/Mi439/device.mk)
+# Inherit from nokia439 device
+$(call inherit-product, device/nokia/nokia439/device.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -24,18 +24,18 @@ PRODUCT_PACKAGES += \
     xiaomi_olive_overlay_lineage
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Mi439
-PRODUCT_NAME := lineage_Mi439
-BOARD_VENDOR := Xiaomi
-PRODUCT_BRAND := Xiaomi
+PRODUCT_DEVICE := nokia439
+PRODUCT_NAME := lineage_nokia439
+BOARD_VENDOR := Nokia
+PRODUCT_BRAND := Nokia
 PRODUCT_MODEL := SDM439
-PRODUCT_MANUFACTURER := Xiaomi
-TARGET_VENDOR := Xiaomi
+PRODUCT_MANUFACTURER := Nokia
+TARGET_VENDOR := Nokia
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-nokia
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="olive-user 10 QKQ1.191014.001 V12.5.1.0.QCNMIXM release-keys"
+    PRIVATE_BUILD_DESC="Panther-user 11 RKQ1.200928.002 00WW_3_240 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys"
+BUILD_FINGERPRINT := "Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys"
