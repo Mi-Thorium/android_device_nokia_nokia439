@@ -72,11 +72,6 @@ on property:hw.fm.init=*
 on property:vendor.hw.fm.ant.enable=*
     write /sys/class/fm/fm_lan_enable/lan_enable ${vendor.hw.fm.ant.enable}
 
-# LiveDisplay
-on boot
-    chown root root /sys/devices/virtual/graphics/fb0/reading_mode
-    chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
-
 # OverlayFS
 on property:ro.vendor.xiaomi.device=pine
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/pine/etc/sensors/:/vendor/etc/sensors
