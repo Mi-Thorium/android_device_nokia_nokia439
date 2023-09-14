@@ -38,8 +38,8 @@ $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/Mi439
-USES_DEVICE_XIAOMI_MI439 := true
+DEVICE_PATH := device/nokia/nokia439
+USES_DEVICE_NOKIA_NOKIA439 := true
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
@@ -50,7 +50,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,Mi439,Mi439_4_19
+TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,nokia439,nokia439_4_19
 
 # Display
 TARGET_SCREEN_DENSITY := 320
@@ -60,8 +60,8 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/gatekeeper.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mi439
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi439
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_nokia_nokia439
+TARGET_RECOVERY_DEVICE_MODULES := init_nokia_nokia439
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 1
@@ -130,12 +130,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Rootdir
-SOONG_CONFIG_NAMESPACES += XIAOMI_MI439_ROOTDIR
-SOONG_CONFIG_XIAOMI_MI439_ROOTDIR := KERNEL_VERSION
+SOONG_CONFIG_NAMESPACES += NOKIA_NOKIA439_ROOTDIR
+SOONG_CONFIG_NOKIA_NOKIA439_ROOTDIR := KERNEL_VERSION
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
-SOONG_CONFIG_XIAOMI_MI439_ROOTDIR_KERNEL_VERSION := k4_19
+SOONG_CONFIG_NOKIA_NOKIA439_ROOTDIR_KERNEL_VERSION := k4_19
 else
-SOONG_CONFIG_XIAOMI_MI439_ROOTDIR_KERNEL_VERSION := k4_9
+SOONG_CONFIG_NOKIA_NOKIA439_ROOTDIR_KERNEL_VERSION := k4_9
 endif
 
 # Security patch level
@@ -147,4 +147,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/Mi439/BoardConfigVendor.mk
+include vendor/nokia/nokia439/BoardConfigVendor.mk

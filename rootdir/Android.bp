@@ -6,9 +6,9 @@
 
 // fstab
 soong_config_module_type {
-    name: "xiaomi_mi439_rootdir_prebuilt_etc",
+    name: "nokia_nokia439_rootdir_prebuilt_etc",
     module_type: "prebuilt_etc",
-    config_namespace: "XIAOMI_MI439_ROOTDIR",
+    config_namespace: "NOKIA_NOKIA439_ROOTDIR",
     variables: ["KERNEL_VERSION"],
     properties: ["src"],
 }
@@ -18,7 +18,7 @@ soong_config_string_variable {
     values: ["k4_9", "k4_19"],
 }
 
-xiaomi_mi439_rootdir_prebuilt_etc {
+nokia_nokia439_rootdir_prebuilt_etc {
     name: "fstab.qcom",
     src: "etc/fstab_4_9.qcom",
     soong_config_variables: {

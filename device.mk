@@ -71,7 +71,7 @@ endif
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mi439 \
+    android.hardware.biometrics.fingerprint@2.1-service.nokia_nokia439 \
     android.hardware.biometrics.fingerprint@2.2
 
 # Input
@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/Mi439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
+    vendor/nokia/nokia439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -100,11 +100,11 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vibrator
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.3-service.xiaomi_mi439
+    android.hardware.vibrator@1.3-service.nokia_nokia439
 endif
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)
+$(call inherit-product, vendor/nokia/nokia439/nokia439-vendor.mk)
 
 # EXTRA: MiuiCamera
 ifneq ($(wildcard vendor/miuicamera/config.mk),)

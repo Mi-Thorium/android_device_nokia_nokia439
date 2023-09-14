@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(USES_DEVICE_XIAOMI_MI439),true)
+ifeq ($(USES_DEVICE_NOKIA_NOKIA439),true)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 WCNSS_MAC_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/wlan_mac.bin
