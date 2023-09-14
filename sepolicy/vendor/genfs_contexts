@@ -1,5 +1,2 @@
-# FM
-genfscon sysfs /class/fm/fm_lan_enable/lan_enable u:object_r:sysfs_fm_lan:s0
-
 # Mach
 genfscon sysfs /xiaomi-sdm439-mach	u:object_r:sysfs_mi439_mach:s0

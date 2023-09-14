@@ -65,13 +65,6 @@ on property:sys.boot_completed=1
     chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
     chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
 
-# FM
-on property:hw.fm.init=*
-    write /sys/class/fm/fm_lan_enable/lan_enable ${hw.fm.init}
-
-on property:vendor.hw.fm.ant.enable=*
-    write /sys/class/fm/fm_lan_enable/lan_enable ${vendor.hw.fm.ant.enable}
-
 # OverlayFS
 on property:ro.vendor.xiaomi.device=pine
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/pine/etc/sensors/:/vendor/etc/sensors
