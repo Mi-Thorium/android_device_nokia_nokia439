@@ -82,14 +82,3 @@ on property:ro.vendor.xiaomi.device=olive
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/olive/etc/sensors/:/vendor/etc/sensors
     mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/olive/etc/camera/:/vendor/etc/camera
     restart vendor.camera-provider-2-4
-
-# Thermal
-service thermal-engine /vendor/bin/thermal-engine-olive
-    override
-    class main
-    user root
-    group root
-    socket thermal-send-client stream 0660 system oem_2907
-    socket thermal-recv-client stream 0660 system oem_2907
-    socket thermal-recv-passive-client stream 0660 system oem_2907
-    socket thermal-send-rule stream 0660 system oem_2907
