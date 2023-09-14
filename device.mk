@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# ConsumerIR
+TARGET_HAS_NO_CONSUMERIR := true
+
 # Cryptfshw
 TARGET_EXCLUDE_CRYPTFSHW := true
 
@@ -45,7 +48,6 @@ PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_olive/android.hardware.fingerprint.xml
 
 # Audio

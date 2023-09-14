@@ -72,11 +72,6 @@ on property:hw.fm.init=*
 on property:vendor.hw.fm.ant.enable=*
     write /sys/class/fm/fm_lan_enable/lan_enable ${vendor.hw.fm.ant.enable}
 
-# IR
-on boot
-    chown system system /dev/ir_spi
-    chown system system /dev/lirc0
-
 # LiveDisplay
 on boot
     chown root root /sys/devices/virtual/graphics/fb0/reading_mode
