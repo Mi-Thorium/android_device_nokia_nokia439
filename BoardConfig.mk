@@ -119,7 +119,6 @@ endif
 TARGET_TAP_TO_WAKE_NODE := "/proc/sys/dev/dt2w"
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
@@ -142,7 +141,6 @@ endif
 VENDOR_SECURITY_PATCH := 2021-07-01
 
 # SELinux
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
