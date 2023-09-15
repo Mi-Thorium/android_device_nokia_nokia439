@@ -20,8 +20,8 @@ $(call inherit-product, device/nokia/nokia439/device.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    xiaomi_pine_overlay_lineage \
-    xiaomi_olive_overlay_lineage
+    nokia_deadpool_overlay_lineage \
+    nokia_panther_overlay_lineage
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nokia439

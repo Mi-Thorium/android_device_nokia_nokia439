@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_olive_overlay_SystemUI",
+    name: "nokia_panther_overlay_Snap",
     sdk_version: "current",
     vendor: true,
 }

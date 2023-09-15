@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="android.overlay.xiaomi.olive.systemui"
+        package="android.overlay.lineage.nokia.deadpool"
         android:versionCode="1"
         android:versionName="1.0">
-        <overlay android:targetPackage="com.android.systemui"
+        <overlay android:targetPackage="lineageos.platform"
                 android:requiredSystemPropertyName="ro.vendor.xiaomi.device"
-		android:requiredSystemPropertyValue="olive"
+		android:requiredSystemPropertyValue="deadpool"
 		android:priority="800"
 		android:isStatic="true" />
 </manifest>
