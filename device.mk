@@ -37,7 +37,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-haptics
 endif
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_HEIGHT := 1520
 TARGET_SCREEN_WIDTH := 720
 
 # Dynamic Partitions
