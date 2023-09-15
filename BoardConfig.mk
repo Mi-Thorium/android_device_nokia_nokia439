@@ -50,7 +50,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,nokia439,nokia439_4_19
+TARGET_OTA_ASSERT_DEVICE := DPL_sprout,PAN_sprout,Deadpool,Panther,nokia439,nokia439_4_19
 
 # Display
 TARGET_SCREEN_DENSITY := 320
