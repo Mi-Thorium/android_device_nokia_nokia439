@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_pine_overlay_lineage",
+    name: "nokia_panther_overlay",
     sdk_version: "current",
     vendor: true,
 }

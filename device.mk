@@ -27,10 +27,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    xiaomi_pine_overlay \
-    xiaomi_olive_overlay \
-    xiaomi_olive_overlay_Snap \
-    xiaomi_olive_overlay_SystemUI
+    nokia_deadpool_overlay \
+    nokia_panther_overlay \
+    nokia_panther_overlay_Snap \
+    nokia_panther_overlay_SystemUI
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
