@@ -5,11 +5,11 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
     oneshot
 
 # Audio
-on property:ro.vendor.xiaomi.device=pine
-    setprop vendor.audio.mixer_xml.path /vendor/etc/pine_mixer_paths_sdm439_pm8953.xml
+on property:ro.vendor.xiaomi.device=deadpool
+    setprop vendor.audio.mixer_xml.path /odm/etc/mixer_paths_sdm429_sku1.xml
 
-on property:ro.vendor.xiaomi.device=olive
-    setprop vendor.audio.mixer_xml.path /vendor/etc/olive_mixer_paths_sdm439_pm8953.xml
+on property:ro.vendor.xiaomi.device=panther
+    setprop vendor.audio.mixer_xml.path /odm/etc/mixer_paths_sdm439_sku1.xml
 
 # OverlayFS
 on property:ro.vendor.xiaomi.device=pine
