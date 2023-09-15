@@ -19,9 +19,11 @@ TARGET_KERNEL_VERSION := 4.19
 $(call inherit-product, device/nokia/nokia439/device.mk)
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
-    nokia_deadpool_overlay_lineage \
-    nokia_panther_overlay_lineage
+    nokia_deadpool_overlay_lineage
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nokia439_4_19
