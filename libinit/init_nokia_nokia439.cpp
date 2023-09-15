@@ -11,54 +11,33 @@
 
 #include <android-base/file.h>
 
-static const variant_info_t pine_info = {
-    .brand = "Xiaomi",
-    .device = "pine",
+static const variant_info_t deadpool_info = {
+    .brand = "Nokia",
+    .device = "Deadpool",
     .marketname = "",
-    .model = "Redmi 7A",
-    .build_fingerprint = "Xiaomi/pine/pine:10/QKQ1.191014.001/V12.5.1.0.QCMMIXM:user/release-keys",
+    .model = "Nokia 3.2",
+    .build_fingerprint = "Nokia/Deadpool_00WW/DPL_sprout:9/PKQ1.190202.001/00WW_1_41B:user/release-keys",
+    .dpi = 320,
 };
 
-static const variant_info_t olive_info = {
-    .brand = "Xiaomi",
-    .device = "olive",
+static const variant_info_t panther_info = {
+    .brand = "Nokia",
+    .device = "Panther",
     .marketname = "",
-    .model = "Redmi 8",
-    .build_fingerprint = "Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys",
-};
-
-static const variant_info_t olivelite_info = {
-    .brand = "Xiaomi",
-    .device = "olivelite",
-    .marketname = "",
-    .model = "Redmi 8A",
-    .build_fingerprint = "Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys",
-};
-
-static const variant_info_t olivewood_info = {
-    .brand = "Xiaomi",
-    .device = "olivewood",
-    .marketname = "",
-    .model = "Redmi 8A Dual",
-    .build_fingerprint = "Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNMIXM:user/release-keys",
+    .model = "Nokia 4.2",
+    .build_fingerprint = "Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_150:user/release-keys",
+    .dpi = 300,
 };
 
 static void determine_device()
 {
-    std::string fdt_model, mach_codename;
-    android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
-    if (fdt_model.find("PINE QRD") != fdt_model.npos) {
-        set_variant_props(pine_info);
-    } else if (fdt_model.find("Olive QRD") != fdt_model.npos) {
-        android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
-        mach_codename.pop_back();
-        if (mach_codename == "olivelite")
-            set_variant_props(olivelite_info);
-        else if (mach_codename == "olivewood")
-            set_variant_props(olivewood_info);
-        else
-            set_variant_props(olive_info);
-    }
+    std::string mach_codename;
+    android::base::ReadFileToString("/sys/nokia-sdm439-mach/codename", &mach_codename, true);
+    mach_codename.pop_back();
+    if (mach_codename == "deadpool")
+        set_variant_props(deadpool_info);
+    else if (mach_codename == "panther")
+        set_variant_props(panther_info);
 }
 
 void vendor_load_properties() {
