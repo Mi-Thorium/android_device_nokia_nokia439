@@ -83,9 +83,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/audio/pine_mixer_paths_sdm439_pm8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pine_mixer_paths_sdm439_pm8953.xml \
-    $(LOCAL_PATH)/audio/olive_mixer_paths_sdm439_pm8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/olive_mixer_paths_sdm439_pm8953.xml
+    $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_ODM)/etc/)
 
 # Camera
 #PRODUCT_PACKAGES += \
