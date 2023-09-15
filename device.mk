@@ -29,8 +29,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     nokia_deadpool_overlay \
     nokia_panther_overlay \
-    nokia_panther_overlay_Snap \
-    nokia_panther_overlay_SystemUI
+    nokia_panther_overlay_Snap
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 ifneq ($(TARGET_KERNEL_VERSION),4.19)
