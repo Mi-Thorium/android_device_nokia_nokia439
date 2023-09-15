@@ -1,2 +1,2 @@
 # Mach
-genfscon sysfs /xiaomi-sdm439-mach	u:object_r:sysfs_mi439_mach:s0
+genfscon sysfs /nokia-sdm439-mach	u:object_r:sysfs_nokia439_mach:s0

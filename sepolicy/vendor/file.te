@@ -1,2 +1,2 @@
 # Mach
-type sysfs_mi439_mach, fs_type, sysfs_type;
+type sysfs_nokia439_mach, fs_type, sysfs_type;
