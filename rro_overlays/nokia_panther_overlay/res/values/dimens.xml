@@ -16,8 +16,5 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <dimen name="rounded_corner_radius">70.0px</dimen>
-    <dimen name="rounded_corner_radius_bottom">70.0px</dimen>
-    <dimen name="rounded_corner_radius_top">70.0px</dimen>
-    <dimen name="status_bar_height_portrait">27.5dip</dimen>
+    <dimen name="status_bar_height_portrait">28.0dip</dimen>
 </resources>
