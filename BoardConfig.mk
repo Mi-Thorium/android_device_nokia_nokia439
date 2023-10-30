@@ -67,6 +67,11 @@ ifeq ($(TARGET_USES_MITHORIUM_KERNEL),true)
 TARGET_KERNEL_CONFIG += vendor/nokia/sdm439/nokia439.config
 endif
 
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_KERNEL_CONFIG += vendor/msm-clk.config
+TARGET_KERNEL_RECOVERY_CONFIG += vendor/msm-clk.config
+endif
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_USES_METADATA_PARTITION := true
