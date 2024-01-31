@@ -105,8 +105,8 @@ endif
 #    android.hardware.biometrics.fingerprint@2.2
 
 # Recovery
-PRODUCT_COPY_FILES += \
-    vendor/nokia/nokia439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
+#PRODUCT_COPY_FILES += \
+#    vendor/nokia/nokia439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -125,4 +125,4 @@ PRODUCT_PACKAGES += \
 endif
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/nokia/nokia439/nokia439-vendor.mk)
+#$(call inherit-product, vendor/nokia/nokia439/nokia439-vendor.mk)

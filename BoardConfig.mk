@@ -133,4 +133,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/nokia/nokia439/BoardConfigVendor.mk
+#include vendor/nokia/nokia439/BoardConfigVendor.mk
