@@ -26,6 +26,8 @@ USES_DEVICE_NOKIA_NOKIA439 := true
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     boot \
+    dtbo \
+    vbmeta \
     system \
     vendor
 
@@ -112,9 +114,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Rootdir
 SOONG_CONFIG_NAMESPACES += NOKIA_NOKIA439_ROOTDIR
